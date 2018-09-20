@@ -1,3 +1,5 @@
+#define ll long long
+//This Method Works Only When M is Prime, So Carefull While Using It.
 ll gcd(ll a,ll b)
 {
     if(b==0)
