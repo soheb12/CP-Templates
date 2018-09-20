@@ -1,5 +1,5 @@
 #define ll long long
-
+// Modular Inverse Works When m,a are coprime, So gcd(a,m)=1.
 ll xgcd(ll a,ll b,ll &x,ll &y)
 {
     if(b==0)
