@@ -3,12 +3,12 @@
 
 string operator+(string s1,string s2)
 {
-    ll n1=s1.size(),n2=s2.size(),carry=0,sum=0;
     if(n1>n2)
     swap(s1,s2);
     reverse(s1.begin(),s1.end());
     reverse(s2.begin(),s2.end());
     string res;
+    ll n1=s1.size(),n2=s2.size(),carry=0,sum=0;
     for(ll i=0;i<n1;i++)
     {
         sum = (s1[i]-'0')+(s2[i]-'0')+carry;
