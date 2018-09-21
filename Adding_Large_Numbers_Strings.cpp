@@ -3,7 +3,7 @@
 
 string operator+(string s1,string s2)
 {
-    if(n1>n2)
+    if(s1.size()>s2.size())
     swap(s1,s2);
     reverse(s1.begin(),s1.end());
     reverse(s2.begin(),s2.end());
