@@ -17,7 +17,7 @@ string operator+(string s1,string s2)
     }
     for(ll i=n1;i<n2;i++)
     {
-        sum = (s1[i]-'0')+(s2[i]-'0')+carry;
+        sum = (s2[i]-'0')+carry;
         res.pb(sum%10+'0');
         carry = sum/10;
     }
