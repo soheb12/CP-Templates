@@ -24,3 +24,12 @@ ll mod_inv(ll a,ll m)
     x = (x%m + m)%m;//x can be negative but we need possitive
     return x;
 }
+
+ll mod_div(ll a,ll b,ll m)
+{
+    ll inv = mod_inv(b,m);
+    if(inv == -1)
+    return -1;
+    else
+    return (inv*a)%m;// (a * b^-1)%m
+}
