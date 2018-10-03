@@ -57,4 +57,25 @@ ll max_xor(ll x)
     return ans;
 }
 
+ll min_xor(ll x)
+{
+    TrieNode* temp = head;
+    ll ans = 0;
+    for(int i=30;i>=0;i--)
+    {
+        int curbit = (x>>i)&1;
+        if(temp->bit[curbit] != NULL && temp->bit[curbit]->cnt > 0)
+        {
+            temp = temp->bit[curbit];
+        }
+        else
+        {
+            ans += (1LL << i);
+            temp = temp->bit[curbit^1];
+        }
+    }
+    return ans;
+}
+
 //Solved This problem : http://codeforces.com/contest/706/problem/D
+//Solved This problem : http://codeforces.com/problemset/problem/948/D
