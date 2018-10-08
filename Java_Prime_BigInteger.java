@@ -29,7 +29,7 @@ public class Main
 	    t = inp.nextInt();
 	    for(int i=0;i<t;i++)
 	    {
-	    BigInteger a = inp.nextBigInteger();
+	        BigInteger a = inp.nextBigInteger();
 		BigInteger b = inp.nextBigInteger();
 		a = a.multiply(a);
 		b = b.multiply(b);
