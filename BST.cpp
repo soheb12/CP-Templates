@@ -61,4 +61,24 @@ pair<int,int> hd(node* nn)
     return {height,diameter};
 }
 
-//Solved this Problem : binary-search-tree/practice-problems/algorithm/monk-watching-fight/description/
+node* lca(node* root,int a,int b)
+{
+    if(root->data > max(a,b))
+    return lca(root->l,a,b);
+    else if(root->data < min(a,b))
+    return lca(root->r,a,b);
+    return root;
+}
+ 
+int max_node(node* root,int v) // max value from a node to a node with value v
+{
+    if(root->data == v)
+        return v;
+    if(root->data > v)
+    return max(max_node(root->l,v) , root->data);
+    else
+    return max(max_node(root->r,v) , root->data);   
+}
+
+//Solved this Problem : https://www.hackerearth.com/practice/data-structures/trees/binary-search-tree/practice-problems/algorithm/monk-watching-fight/
+//Solved this Problem : https://www.hackerearth.com/practice/data-structures/trees/binary-search-tree/practice-problems/algorithm/monk-and-cursed-tree/
