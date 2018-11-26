@@ -33,3 +33,11 @@ map<ll,ll> gen_prime_factors(ll n,ll* spf)
     }
     return m;
 }
+
+
+    //in solve
+    ll n;
+    cin>>n;
+    ll* spf = new int[n+1];
+    spf = seive(n);
+    map<ll,ll>ans = gen_prime_factors(n,spf);
