@@ -4,10 +4,10 @@ typedef pair<ll,ll> iPai
 class Graph 
 { 
 	ll V; 
-    ll *parent;
 	vector< pair<ll, ll> > *adj; 
 
 public: 
+	ll *parent;
 	Graph(ll V); 
 	void addEdge(ll u, ll v, ll w); 
 	void shortestPath(ll s,ll d); 
