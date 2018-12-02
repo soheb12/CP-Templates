@@ -44,3 +44,4 @@ void update(ll cur,ll a_beg,ll a_end,ll pos,ll val)
         tree[cur] = min(tree[2*cur],tree[2*cur+1]);
     }
 }
+//Solved this problem : https://codeforces.com/problemset/problem/339/D
