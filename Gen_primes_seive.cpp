@@ -58,3 +58,5 @@ void segmentedSeive(ll l,ll r)
 
 //in solve
 call seive() first
+
+// Solved this problem : https://www.codechef.com/AMR16MOS/problems/AMR16C
