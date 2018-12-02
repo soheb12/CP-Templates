@@ -1,6 +1,6 @@
 struct mat
 {
-    ll a[2][2];
+    ll m[2][2];
 };
 
 
@@ -11,10 +11,10 @@ mat matmul(mat x,mat y)
     {
         for(int j=0;j<2;j++)
         {
-            ans.a[i][j] = 0;
+            ans.m[i][j] = 0;
             for(int k=0;k<2;k++)
             {
-                ans.a[i][j] = (ans.a[i][j] + x.a[i][k] * y.a[k][j])%mod;
+                ans.m[i][j] = (ans.m[i][j] + x.m[i][k] * y.m[k][j])%mod;
             }
             
         }
@@ -25,10 +25,10 @@ mat matmul(mat x,mat y)
 mat power(mat z,ll n)
 {
     mat res;
-    res.a[0][0] = 1;
-    res.a[0][1] = 0;
-    res.a[1][0] = 0;
-    res.a[1][1] = 1;
+    res.m[0][0] = 1;
+    res.m[0][1] = 0;
+    res.m[1][0] = 0;
+    res.m[1][1] = 1;
 
     while(n>0)
     {
