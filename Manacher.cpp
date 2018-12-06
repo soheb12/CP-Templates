@@ -14,7 +14,7 @@ string convertToNewString(string s)
     return res;//new length is 2*n+3
 }
 
-void generatePalindromeArray(string str)
+void manacher(string str)
 {
     string s = convertToNewString(str); //pre-processing the string
     ll c = 0,r = 0;//center and radius(length)
