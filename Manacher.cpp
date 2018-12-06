@@ -1,3 +1,5 @@
+//******************Find the max in lps[] to get longest palindrome substring
+
 ll lps[2*size];
 ll n,k;
 
