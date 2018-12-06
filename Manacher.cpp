@@ -34,3 +34,4 @@ void generatePalindromeArray(string str)
 }
 
 // To consider only substrings of over length n in a doubled string consider range n+1 to 3*n-1 and increments of 2
+
