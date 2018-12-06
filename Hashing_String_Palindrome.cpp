@@ -43,3 +43,5 @@ bool isPalin(ll l,ll r)
     return true;
     return false;
 }
+
+//Solved This Problem : https://www.codechef.com/problems/SHIFTPAL
