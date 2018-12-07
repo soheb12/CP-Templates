@@ -14,14 +14,14 @@ vector<edge>adj[size];
 ll level[size];
 ll ptr[size];
  
-inline void addedge(ll u,ll v,ll w){
+void addedge(ll u,ll v,ll w){
 	edge a(v,0,w,adj[v].size());
 	edge b(u,0,w,adj[u].size());
 	adj[u].push_back(a);
 	adj[v].push_back(b);
 }
  
-inline bool bfs(ll s,ll t){
+bool bfs(ll s,ll t){
 	memset(level,-1,sizeof level);
 	level[s]=0;
 	queue<ll>q;
@@ -39,7 +39,7 @@ inline bool bfs(ll s,ll t){
 	return level[t]<0?0:1;
 }
  
-inline ll dfs(ll u,ll flow,ll t){
+ll dfs(ll u,ll flow,ll t){
 	if(u==t)
 	return flow;
 
