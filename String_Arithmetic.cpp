@@ -132,4 +132,17 @@ string operator/(string num,ll div)
     return res;
 }
 
+ll power(ll a,ll b,ll m) {ll res = 1;while(b>0){if(b&1)res = (res*a)%m;b = b>>1;a = (a*a)%m;}return res;}
+
+ll smod(string num1,string num2)//gives (num1^num2)%mod
+{
+    ll a = 0, b = 0; 
+    for (int i = 0; i < num1.length(); i++) 
+        a = (a * 10 + (num1[i] - '0')) % mod; 
+    for (int i = 0; i < num2.length(); i++) 
+        b = (b * 10 + (num2[i] - '0')) % (mod - 1); 
+  
+    return power(a, b , mod); 
+}
+
 //Solved this Problem : https://www.codechef.com/problems/AMIFIB
