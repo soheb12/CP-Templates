@@ -28,3 +28,4 @@ void z_function()
     }
 }
 //Solved this problem : http://codeforces.com/contest/126/problem/B
+//Solved this problem : https://www.codechef.com/problems/SECPASS lmao_
