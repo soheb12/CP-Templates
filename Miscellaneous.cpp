@@ -12,6 +12,43 @@ const ll size = 2e5+9;
 ll gcd(ll a,ll b) {if(b==0)return a;return gcd(b,a%b);}
 ll power(ll a,ll b,ll m = mod) {ll res = 1;while(b>0){if(b&1)res = (res*a)%m;b = b>>1;a = (a*a)%m;}return res;}
 
+// function to find first index >= x
+ll lowerIndex(ll s,ll x) //lower_bound(a+s,a+n,x) - (a+s);// first index >= x
+{ 
+    ll l = s, h = n - 1; 
+    while (l <= h) { 
+        ll mid = (l + h) / 2; 
+        if (a[mid] >= x) 
+            h = mid - 1; 
+        else
+            l = mid + 1; 
+    } 
+    return l; 
+} 
+  
+// function to find last index <= y 
+ll upperIndex(ll s,ll y) //upper_bound(a+s,a+n,y) - (a+s) - 1; first index > y
+{ 
+    ll l = s, h = n - 1; 
+    while (l <= h) { 
+        ll mid = (l + h) / 2; 
+        if (a[mid] <= y) 
+            l = mid + 1; 
+        else
+            h = mid - 1; 
+    } 
+    return h; 
+} 
+  
+// function to count elements within given range 
+ll count(ll s,ll x, ll y) 
+{ 
+    // initialize result 
+    ll u = upper_bound(a+s,a+n,y) - (a+s) - 1;
+    ll l = lower_bound(a+s,a+n,x) - (a+s);
+    ll count = u - l + 1; 
+    return count; 
+} 
 
 void solve()
 {
