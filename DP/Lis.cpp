@@ -30,7 +30,7 @@ ll lnds()//longest non decreasing subsequence
         tail[len++] = a[i];
         else
         {
-            ll ind = ceilindex(tail,-1,len-1,a[i]);
+            ll ind = ceilindex(tail,-1,len-1,a[i]);//Alternatively LOWER_BOUND can be used
             if(tail[ind] == a[i])
             tail[++ind] = a[i];
             else
@@ -71,7 +71,7 @@ ll lis()//longest increasing subsequence
         tail[len++] = a[i];
         else
         {
-            ll ind = ceilindex(tail,-1,len-1,a[i]);
+            ll ind = ceilindex(tail,-1,len-1,a[i]);//Alternatively UPPER_BOUND can be used
             tail[ind] = a[i];
         }
     }   
