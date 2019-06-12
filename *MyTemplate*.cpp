@@ -10,8 +10,8 @@
 #define ll long long
 using namespace std;
 // #include <ext/pb_ds/assoc_container.hpp> 
-// #include <ext/pb_ds/tree_policy.hpp> 
-// using namespace __gnu_pbds;
+// #include <ext/pb_ds/tree_policy.hpp> //lower_bound , upper_bound
+// using namespace __gnu_pbds;//kth smallest : *pd.find_by_order(k-1) , no. of elem < X : pd.order_of_key(X) , delete X : pd.erase(X).
 // typedef tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update> pbds;
 #define f(a,b) for(ll i=a;i<b;i++)
 #define fb(a,b) for(ll i=a;i>=b;i--)
@@ -46,4 +46,3 @@ int main()
     fprintf(stderr, "%.3f sec, Copyright %c 2019 Skyscraper. \n", double(end - beg) / CLOCKS_PER_SEC , 184);
     return 0;
 }
- 
