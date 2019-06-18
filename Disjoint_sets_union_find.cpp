@@ -11,7 +11,7 @@ ll find_ds(ll x)
     return ind;
 }
  
-void union_ds(ll u,ll v)
+void union_ds(ll u,ll v)//make sure to call this with representative node of both sets i.e first call find_ds on u,v
 {
     if(ds[u].Y >= ds[v].Y)
     {
