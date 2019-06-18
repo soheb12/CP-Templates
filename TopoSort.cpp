@@ -1,37 +1,55 @@
 
-ll n;
-vector<ll>adj[100005];
-bool vis[100005];
-stack<ll>s;
-vector<ll>g;
+vector<ll>adj[sz];
+ll state[sz];//0 unvisited , 1 processing , 2 done processing
+stack<ll>stk;
 
-void topo_util(ll v)
+bool dfs(ll u)//will return false if there is a cycle otherwise print the content on the stack to get toposort
 {
-    vis[v] = true;
-    
-    for(ll i=0;i<adj[v].size();i++)
+    if(state[u] == 2)
+    return false;
+    if(state[u] == 1)//back edge
+    return true;
+ 
+    state[u] = 1;
+    for(ll v : adj[u])
     {
-        if(!vis[adj[v][i]])
-        topo_util(adj[v][i]);
+        if(dfs(v))
+        return true;
     }
-    s.push(v);
+    state[u] = 2;
+    stk.push(u);
+    return false;
 }
 
-void topo_sort()
-{
-    for(ll i=1;i<=n;i++)
-    vis[i] = false;
+//Lexicographically smallest Toposort
 
-    for(ll i=1;i<=n;i++)
+ll n,m;//nodes , edges
+vector<ll>adj[sz];//graph
+ll in[sz];//indegress
+
+void bfs()
+{
+    priority_queue<ll,vector<ll>, greater<ll> >pq;
+    f(1,n+1)
     {
-        if(!vis[i])
-        topo_util(i);
+        if(in[i] == 0)//in stores all the indegrees of the initial graph
+        pq.push(i);
     }
-    while(!s.empty())
+    while(!pq.empty())
     {
-        g.pb(s.top());
-        s.pop();
+        ll u = pq.top();
+        pq.pop();
+        cout<<u<<" ";
+        for(ll j : adj[u])
+        {
+            in[j]--;
+            if(in[j] == 0)
+            pq.push(j);
+        }
     }
+    cout<<endl;
 }
 
 // Solved this problem : https://codeforces.com/contest/1033/problem/C
+// Solved this problem : https://www.spoj.com/problems/TOPOSORT/  (lexicographically smallest)
+
