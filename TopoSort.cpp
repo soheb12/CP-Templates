@@ -3,7 +3,7 @@ vector<ll>adj[sz];
 ll state[sz];//0 unvisited , 1 processing , 2 done processing
 stack<ll>stk;
 
-bool dfs(ll u)//will return false if there is a cycle otherwise print the content on the stack to get toposort
+bool dfs(ll u)//will return true if there is a cycle otherwise print the content on the stack to get toposort
 {
     if(state[u] == 2)
     return false;
