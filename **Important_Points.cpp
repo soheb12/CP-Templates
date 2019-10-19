@@ -10,4 +10,7 @@
     else if(isp(n-2))//for odd numbers if (n-2) is prime then it can be expressed as sum of two primes
         cout<<2<<endl;
     else 
-        cout<<3<<endl;//3 + (n-3) here n-3 is even which can be expressed as sum of two primes       
+        cout<<3<<endl;//3 + (n-3) here n-3 is even which can be expressed as sum of two primes  
+
+->Thought process
+* Think about how to reduce the number of combinations in the input, by solving different combinations differently.
