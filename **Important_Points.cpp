@@ -14,3 +14,4 @@
 
 ->Thought process
 * Think about how to reduce the number of combinations in the input, by solving different combinations differently.
+* If you get a brute force DP solution for a problem then for larger constraints try to look for a pattern in dp values.
