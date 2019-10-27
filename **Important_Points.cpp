@@ -16,4 +16,7 @@
 * Think about how to reduce the number of combinations in the input, by solving different combinations differently.
 * If you get a brute force DP solution for a problem then for larger constraints try to look for a pattern in dp values.
   https://codeforces.com/contest/1248/problem/C
+* while writing a DP solution involving a array since you cant pass the entire array pass by how much the previous value has
+  changed and if the range of values that a particular index can take is small then memorize it.
+  https://codeforces.com/contest/1221/problem/D
 *
