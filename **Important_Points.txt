@@ -18,5 +18,7 @@
   https://codeforces.com/contest/1248/problem/C
 * while writing a DP solution involving a array since you cant pass the entire array pass by how much the previous value has
   changed and if the range of values that a particular index can take is small then memorize it.
-  https://codeforces.com/contest/1221/problem/D
-*
+  https://codeforces.com/contest/1221/submission/63549990
+* If you want process a[i]-1, a[i]+1 for entire array and then ignore a[i]'s use a queue and pop the already processed elemenets
+  https://codeforces.com/contest/1283/submission/67993660
+
