@@ -21,4 +21,6 @@
   https://codeforces.com/contest/1221/submission/63549990
 * If you want process a[i]-1, a[i]+1 for entire array and then ignore a[i]'s use a queue and pop the already processed elemenets
   https://codeforces.com/contest/1283/submission/67993660
+* Suppose while doing multisource bfs we arrive at a vertex i and if answer we have at vertex v is actually the answer for the source from where we started then just reverse the graph and perform the same logic.
+  https://codeforces.com/contest/1272/submission/68036910
 
